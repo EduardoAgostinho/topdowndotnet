@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TaskManagementAPI.Models;
 using TaskManagementAPI.Services;
 using TasksModel = TaskManagementAPI.Models.TasksModel;
 

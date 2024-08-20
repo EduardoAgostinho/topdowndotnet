@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-using TaskManagementAPI.Models;
-using TasksModel = TaskManagementAPI.Models.TasksModel;
+﻿using TasksModel = TaskManagementAPI.Models.TasksModel;
 
 namespace TaskManagementAPI.Services
 {

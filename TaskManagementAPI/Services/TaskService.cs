@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Threading.Tasks;
 using TaskManagementAPI.Data;
-using TaskManagementAPI.Models;
 using TasksModel = TaskManagementAPI.Models.TasksModel;
 
 namespace TaskManagementAPI.Services

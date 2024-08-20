@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.VisualStudio.TestPlatform.TestHost;
-using System.Net.Http;
-using Xunit;
 
 public class TestBase : IClassFixture<WebApplicationFactory<Program>>
 {
