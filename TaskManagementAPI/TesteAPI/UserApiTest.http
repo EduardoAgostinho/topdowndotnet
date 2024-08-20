@@ -1,0 +1,42 @@
+
+@ACCESS_JWT = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjQxMjkyMjIsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMjIiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjIyIn0.wzU2ilXxB_SOesNF6iWJADJwJNoqBF73H3RCrxNPx8Y
+
+##
+
+### Retorna todos os Usuários
+GET https://localhost:7222/api/Users
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
+
+### Retorna usuário baseado no ID (Retorna usuário com Id 6e86c6b1-367a-40ea-bc3c-c4e93dc7017a)
+GET https://localhost:7222/api/Users/6e86c6b1-367a-40ea-bc3c-c4e93dc7017a
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
+
+### Altera usuário (Altera usuário com Id 6e86c6b1-367a-40ea-bc3c-c4e93dc7017a)
+PUT https://localhost:7222/api/Users/6e86c6b1-367a-40ea-bc3c-c4e93dc7017a
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
+
+{
+  "id": "6e86c6b1-367a-40ea-bc3c-c4e93dc7017a",
+  "userName": "eduardo@teste.com",
+  "normalizedUserName": "EDUARDO@TESTE.COM",
+  "email": "eduardo@teste.com",
+  "normalizedEmail": "EDUARDO@TESTE.COM",
+  "emailConfirmed": false,
+  "passwordHash": "AQAAAAIAAYagAAAAEMuDZpqA4SKJf5cQFuSOYHsPoD2Xvj/KXYXUUWzNA6JGvoDdXsw9As4zd1aBA8N9Vg==",
+  "securityStamp": "ORWETXBBDLAVVPMIKFVDN2G6XVJJG4WP",
+  "concurrencyStamp": "71c60cdf-798a-45bd-894d-0ac28d990347",
+  "phoneNumber": "11944546012",
+  "phoneNumberConfirmed": false,
+  "twoFactorEnabled": false,
+  "lockoutEnd": null,
+  "lockoutEnabled": true,
+  "accessFailedCount": 0
+}
+
+### Exclui usuário (Exclui usuário com Id 6e86c6b1-367a-40ea-bc3c-c4e93dc7017a)
+DELETE https://localhost:7222/api/Users/6e86c6b1-367a-40ea-bc3c-c4e93dc7017a
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}

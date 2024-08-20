@@ -1,0 +1,47 @@
+
+@ACCESS_JWT = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjQxNjQyMDgsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcyMjIiLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MjIyIn0.EsfB6s5NNtopCwHjj6PY3s-mgaUgqITVCWjQvm5E6bE
+
+##
+
+### Retorna todas as Tarefas
+GET https://localhost:7222/api/Tasks
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
+
+### Retorna 1 tarefa baseada no ID (Está buscando a Task com Id 1)
+GET https://localhost:7222/api/Tasks/1
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
+
+
+### Cria 1 tarefa
+POST https://localhost:7222/api/Tasks
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
+
+{
+  "title": "Revisar a agenda",
+  "description": "Verificar os compormissos do dia",
+  "dueDate": "2024-08-19",
+  "status": "Pendente",
+  "userId": 1
+}
+
+### Altera 1 tarefa (Está alterando a Task com Id 1)
+PUT https://localhost:7222/api/Tasks/1
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
+
+{
+  "Id": 1,
+  "title": "Revisar a agenda principal",
+  "description": "Verificar os compormissos do dia",
+  "dueDate": "2024-08-20",
+  "status": "Pendente",
+  "userId": 1
+}
+
+### Exclui 1 tarefa (Está excluindo a Task com Id 1)
+DELETE https://localhost:7222/api/Tasks/1
+Content-Type: application/json
+Authorization: Bearer {{ACCESS_JWT}}
